@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{DE470DD7-D16B-4A2D-B1C9-A5ED94070D62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ivis.Windows.Forms", "Ivis.Windows.Forms\Ivis.Windows.Forms.csproj", "{349D4DF4-BB48-4FBA-A0D2-214420459543}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DE470DD7-D16B-4A2D-B1C9-A5ED94070D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE470DD7-D16B-4A2D-B1C9-A5ED94070D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE470DD7-D16B-4A2D-B1C9-A5ED94070D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349D4DF4-BB48-4FBA-A0D2-214420459543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349D4DF4-BB48-4FBA-A0D2-214420459543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349D4DF4-BB48-4FBA-A0D2-214420459543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349D4DF4-BB48-4FBA-A0D2-214420459543}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
