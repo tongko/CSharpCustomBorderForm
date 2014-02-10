@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\CaptionButton.cs" />
+    <Compile Include="Core\CaptionButtonCollection.cs" />
+    <Compile Include="Core\DataStrutures\BorderAppearance.cs" />
+    <Compile Include="Core\DataStrutures\BorderSize.cs" />
     <Compile Include="Core\DataStrutures\HitTestMap.cs" />
+    <Compile Include="Core\DataStrutures\MapLocation.cs" />
     <Compile Include="Core\PInvoke\NativeMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
