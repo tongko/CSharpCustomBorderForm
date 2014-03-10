@@ -38,3 +38,4 @@ Logs/log4net.db
 Logs/log4net*.db
 Logs/log4net.db*
 Logs/log4net*.db*
+*.sdf
