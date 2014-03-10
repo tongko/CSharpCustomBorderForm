@@ -12,11 +12,16 @@
 #include	<windows.h>
 #include	<windowsx.h>
 #include	<uxtheme.h>
+#include	<vssym32.h>
 #include	<dwmapi.h>
+#include	<tchar.h>
+#include	<strsafe.h>
 
 
 #include	"NcHitTestEventArgs.h"
+#include	"NcCalcSizeEventArgs.h"
 #include	"NcParams.h"
+#include	"WindowFrame.h"
 #include	"FlatForm.h"
 
 

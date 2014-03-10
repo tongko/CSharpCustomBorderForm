@@ -41,10 +41,13 @@ namespace Ivis { namespace Windows { namespace Forms {
 
 		property NcHitTestResults Result { NcHitTestResults get(void); void set(NcHitTestResults value); }
 
+		property bool IsHandled { bool get(void); void set(bool value); }
+
 	private:
 		Int32 m_x;
 		Int32 m_y;
 		NcHitTestResults m_result;
+		bool m_handled;
 	};
 
 }}}

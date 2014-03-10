@@ -4,10 +4,12 @@
 
 namespace Ivis { namespace Windows { namespace Forms {
 
-	NcHitTestEventArgs::NcHitTestEventArgs(Int32 x, Int32 y)
+	NcHitTestEventArgs::NcHitTestEventArgs(Int32 x, Int32 y) :
+		m_result(NcHitTestResults::NoWhere),
+		m_handled(false),
+		m_x(x),
+		m_y(y)
 	{
-		m_x = x;
-		m_y = y;
 	}
 
 	Int32 NcHitTestEventArgs::X::get(void)  {
@@ -32,6 +34,13 @@ namespace Ivis { namespace Windows { namespace Forms {
 
 	void NcHitTestEventArgs::Result::set(NcHitTestResults value) {
 		m_result = value;
+	}
+
+	bool NcHitTestEventArgs::IsHandled::get(void) {
+		return m_handled;
+	}
+	void NcHitTestEventArgs::IsHandled::set(bool value) {
+		m_handled = value;
 	}
 
 }}}

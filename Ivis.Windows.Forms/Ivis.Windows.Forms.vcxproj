@@ -79,6 +79,7 @@
     <ClInclude Include="FlatForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="NcCalcSizeEventArgs.h" />
     <ClInclude Include="NcHitTestEventArgs.h" />
     <ClInclude Include="NcParams.h" />
     <ClInclude Include="resource.h" />
@@ -86,16 +87,21 @@
       <FileType>CppClass</FileType>
     </ClInclude>
     <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="WindowFrame.h">
+      <FileType>CppClass</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="FlatForm.cpp" />
+    <ClCompile Include="NcCalcSizeEventArgs.cpp" />
     <ClCompile Include="NcHitTestEventArgs.cpp" />
     <ClCompile Include="Shadow.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="WindowFrame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

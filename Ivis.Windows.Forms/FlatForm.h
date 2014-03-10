@@ -7,6 +7,7 @@ namespace Ivis { namespace Windows { namespace Forms {
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Drawing;
+	using namespace System::Runtime::InteropServices;
 
 	/// <summary>
 	/// Summary for FlatForm
@@ -27,7 +28,14 @@ namespace Ivis { namespace Windows { namespace Forms {
 		virtual void		OnHandleCreated(EventArgs ^ e) override;
 
 	protected:		//	Methods
-		virtual Void		OnNcHitTest(NcHitTestEventArgs ^% e);
+		virtual void		AppWndProc(Message % m);
+		virtual bool		NcWndProc(Message % m);
+		virtual void		OnNcHitTest(NcHitTestEventArgs ^% e);
+		virtual void		OnNcCalcSize(NcCalcSizeEventArgs ^% e);
+
+	public:
+		event				EventHandler<NcHitTestEventArgs^>^ NcHitTest;
+		event				EventHandler<NcCalcSizeEventArgs^>^ NcCalculateSize;
 
 	protected:		//	Properties Override
 		property System::Windows::Forms::CreateParams^ CreateParams {
@@ -35,8 +43,10 @@ namespace Ivis { namespace Windows { namespace Forms {
 			Void set(System::Windows::Forms::CreateParams^ cp) override;
 		}
 
-	private:		//	Member Fields
+	public protected:	// Member fields;
 		HWND				m_hWnd;
+
+	private:		//	Member Fields
 		NcParams			m_ncParams;
 
 #pragma region Generated Codes
