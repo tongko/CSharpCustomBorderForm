@@ -30,6 +30,8 @@ Thumbs.db
 obj/
 [Rr]elease*/
 _ReSharper*/
+#Ignore pre-compile header files.
+ipch/
 [Tt]est[Rr]esult*
 #Ignore Seapine Surround SCM repo files
 *.MySCMServerInfo
@@ -38,4 +40,3 @@ Logs/log4net.db
 Logs/log4net*.db
 Logs/log4net.db*
 Logs/log4net*.db*
-*.sdf

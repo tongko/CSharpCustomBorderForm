@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ivis.Windows", "Ivis.Window
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ivis.Windows.Forms", "Ivis.Windows.Forms\Ivis.Windows.Forms.vcxproj", "{8AF16AA6-131B-4FEB-B582-C5899201C655}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCustomBorder", "TestCustomBorder\TestCustomBorder.vcxproj", "{D3CB06D3-7761-4F5B-877C-9B397B559760}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,16 @@ Global
 		{8AF16AA6-131B-4FEB-B582-C5899201C655}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{8AF16AA6-131B-4FEB-B582-C5899201C655}.Release|Win32.ActiveCfg = Release|Win32
 		{8AF16AA6-131B-4FEB-B582-C5899201C655}.Release|Win32.Build.0 = Release|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Debug|Win32.Build.0 = Debug|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Release|Any CPU.ActiveCfg = Release|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Release|Win32.ActiveCfg = Release|Win32
+		{D3CB06D3-7761-4F5B-877C-9B397B559760}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
