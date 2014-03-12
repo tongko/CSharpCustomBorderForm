@@ -87,9 +87,6 @@
       <FileType>CppClass</FileType>
     </ClInclude>
     <ClInclude Include="Stdafx.h" />
-    <ClInclude Include="WindowFrame.h">
-      <FileType>CppClass</FileType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -101,7 +98,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="WindowFrame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

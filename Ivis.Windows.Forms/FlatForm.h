@@ -33,14 +33,17 @@ namespace Ivis { namespace Windows { namespace Forms {
 		virtual void		OnNcHitTest(NcHitTestEventArgs ^% e);
 		virtual void		OnNcCalcSize(NcCalcSizeEventArgs ^% e);
 
+	private:
+		void				PaintFrame(HDC hdc);
+
 	public:
 		event				EventHandler<NcHitTestEventArgs^>^ NcHitTest;
 		event				EventHandler<NcCalcSizeEventArgs^>^ NcCalculateSize;
 
 	protected:		//	Properties Override
 		property System::Windows::Forms::CreateParams^ CreateParams {
-			System::Windows::Forms::CreateParams^ get(Void) override;
-			Void set(System::Windows::Forms::CreateParams^ cp) override;
+			System::Windows::Forms::CreateParams^ get(void) override;
+			void set(System::Windows::Forms::CreateParams^ cp) override;
 		}
 
 	public protected:	// Member fields;

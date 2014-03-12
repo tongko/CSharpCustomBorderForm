@@ -99,9 +99,10 @@ namespace Ivis { namespace Windows { namespace Forms {
 		//	Handle the non-client area painting
 		else if (message == WM_NCPAINT)
 		{
-			HDC hdc = GetDCEx(hWnd, (HRGN)wParam, DCX_WINDOW | DCX_INTERSECTRGN);
+			HDC hdc = GetDCEx(hWnd, (HRGN)wParam, DCX_WINDOW | DCX_INTERSECTRGN | 0x10000);
 
 			//	Do paint code.
+			PaintFrame(hdc);
 
 			ReleaseDC(hWnd, hdc);
 		}
@@ -182,6 +183,7 @@ namespace Ivis { namespace Windows { namespace Forms {
 		USHORT uRow = 1;
 		USHORT uCol = 1;
 		bool fOnResizeBorder = false;
+		bool fOnSysMenu = false;
 		NcHitTestResults topRightResult = NcHitTestResults::TopRight;
 
 		// Determine if the point is at the top or bottom of the window.
@@ -202,22 +204,34 @@ namespace Ivis { namespace Windows { namespace Forms {
 		}
 		else if (ptMouse.x < rcWindow.right && ptMouse.x >= rcWindow.right - m_ncParams.BorderWidth)
 		{
-			if (ptMouse.x >= m_ncParams.FirstTitleBarControl.Left && ptMouse.x <= m_ncParams.LastTitleBarControl.Right)
-			{
-				if (m_ncParams.LastTitleBarControl.Contains(ptMouse.x, ptMouse.y))
-					topRightResult = NcHitTestResults::Close;
-				else if (m_ncParams.FirstTitleBarControl.Contains(ptMouse.x, ptMouse.y))
-					topRightResult = NcHitTestResults::MinButton;
-				else
-					topRightResult = NcHitTestResults::MaxButton;
-			}
 			uCol = 2; // right side
+		}
+		else 
+		{
+			if (uRow == 0 && !fOnResizeBorder)	// On Caption
+			{
+				if (m_ncParams.SysIcon.Contains(Point(ptMouse.x, ptMouse.y)))
+				{
+					fOnSysMenu = true;
+					uCol = 0;
+				}
+				else if (ptMouse.x >= m_ncParams.FirstTitleBarControl.Left && ptMouse.x <= m_ncParams.LastTitleBarControl.Right)
+				{
+					if (m_ncParams.LastTitleBarControl.Contains(ptMouse.x, ptMouse.y))
+						topRightResult = NcHitTestResults::Close;
+					else if (m_ncParams.FirstTitleBarControl.Contains(ptMouse.x, ptMouse.y))
+						topRightResult = NcHitTestResults::MinButton;
+					else
+						topRightResult = NcHitTestResults::MaxButton;
+					uCol = 2;
+				}				
+			}
 		}
 
 		// Hit test (HTTOPLEFT, ... HTBOTTOMRIGHT)
 		NcHitTestResults hitTests[3][3] =
 		{
-			{ NcHitTestResults::TopLeft, fOnResizeBorder ? NcHitTestResults::Top : NcHitTestResults::Caption, topRightResult },
+			{ fOnSysMenu ? NcHitTestResults::SysMenu : NcHitTestResults::TopLeft, fOnResizeBorder ? NcHitTestResults::Top : NcHitTestResults::Caption, topRightResult },
 			{ NcHitTestResults::Left, NcHitTestResults::NoWhere, NcHitTestResults::Right},
 			{ NcHitTestResults::BottomLeft, NcHitTestResults::Bottom, NcHitTestResults::BottomRight },
 		};

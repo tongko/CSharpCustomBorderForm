@@ -45,9 +45,6 @@
     <ClInclude Include="NcCalcSizeEventArgs.h">
       <Filter>Header Files\EventArgs</Filter>
     </ClInclude>
-    <ClInclude Include="WindowFrame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -67,9 +64,6 @@
     </ClCompile>
     <ClCompile Include="NcCalcSizeEventArgs.cpp">
       <Filter>Source Files\EventArgs</Filter>
-    </ClCompile>
-    <ClCompile Include="WindowFrame.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

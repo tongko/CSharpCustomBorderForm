@@ -15,6 +15,7 @@ namespace Ivis { namespace Windows { namespace Forms {
 		Int32 MenuBarHeight;
 		Int32 BorderWidth;
 		Int32 BorderHeight;
+		Rectangle SysIcon;
 		Rectangle HScrollBar;
 		Rectangle VScrollBar;
 
